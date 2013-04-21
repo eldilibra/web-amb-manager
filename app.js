@@ -14,6 +14,6 @@ app.set('port', process.env.port || 3000);
 app.use(app.router);
 app.use(error_handler);
 
-http.createServer(app.listen(app.get('port'), function () {
+http.createServer(app).listen(app.get('port'), function () {
     console.log('Web AMB Manager listening on', app.get('port'));
-}));
+});
